@@ -1,5 +1,250 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: "Signika", sans-serif;
+  font-size: 12px;
+}
+
+.parallax {
+  color: black;
+  background-image: url("http://res.cloudinary.com/dzmtr75qy/image/upload/v1515170539/babyformulaWeb_gfmvgy.jpg");
+  height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.parallax:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.parallax-content {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding-bottom: 20px;
+}
+
+#home-title {
+  font-size: 120px;
+  font-family: "Signika", sans-serif;
+  font-weight: 900;
+  color: #3e61e8;
+  padding-left: 3%;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2.2px;
+}
+
+#home-main-tagline {
+  font-size: 35px;
+  padding-left: 3%;
+  color: #262626;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+#home-sub-tagline {
+  font-size: 30px;
+  padding-left: 3%;
+  color: rgba(38, 38, 38, 0.6);
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+#warning {
+  font-size: 12px;
+  position: absolute;
+  top: 0.8%;
+  right: 0.8%;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.signup-form {
+  padding-left: 3%;
+}
+
+.home-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 70px 50px;
+  cursor: default;
+}
+
+.content {
+  flex: 1;
+  font-size: 16px;
+}
+
+.content.one {
+  flex: 3;
+}
+
+.home-content h1 {
+  font-size: 50px;
+}
+
+/*Signup Form*/
+
+.signup-form {
+  z-index: 2;
+}
+
+#inputbox {
+  background-color: #fff;
+  color: #5b5e6d;
+  font-weight: 400;
+  border: 1px solid #ebebeb;
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 15px 10px;
+  width: 350px;
+}
+
+#submitbutton {
+  background-color: #1c238f;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 15px 10px;
+  font-size: 16px;
+  transition: background-color 300ms ease;
+  margin-left: 10px;
+}
+
+#submitbutton:hover {
+  background-color: #3f46ad;
+}
+
+/*Home Content*/
+
+.content {
+  color: #4d4d4d;
+}
+
+.content p {
+  font-size: 20px;
+  white-space: pre-wrap;
+  padding: 5px 60px;
+  letter-spacing: 0.35px;
+}
+
+/*Footer*/
+
+.home-footer {
+  background-color: #fafafa;
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px 40px 20px 0;
+}
+
+.home-footer a {
+  font-size: 16px;
+  text-decoration: none;
+  color: #d5d3d1;
+  margin-left: 15px;
+}
+
+.home-footer a:visited {
+  color: #d5d3d1;
+}
+
+/*Privacy*/
+
+.top-nav-bar {
+  background-color: #fafafa;
+  padding: 10px 0 20px 0;
+}
+
+.navbar {
+  text-decoration: none;
+  font-size: 40px;
+  font-weight: 900;
+  letter-spacing: 0.25px;
+  color: #f28c8c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imageLogo {
+  width: 10%;
+}
+
+.top-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.policy-container {
+  cursor: default;
+  padding: 20px 150px 20px 150px;
+}
+
+.policy-container p {
+  font-size: 16px;
+}
+.policy-container h2 {
+  padding: 15px;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 800px) {
+  .imageLogo {
+    width: 20%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #home-title {
+    font-size: 90px;
+  }
+
+  #home-main-tagline,
+  #home-sub-tagline {
+    font-size: 28px;
+  }
+
+  #inputbox {
+    width: 50%;
+  }
+
+  .home-content h1 {
+    font-size: 45px;
+  }
+
+  .content.one {
+    flex: 25;
+  }
+  .content p {
+    padding: 0;
+  }
+
+  .policy-container {
+    padding: 20px 60px;
+  }
+
+  .top-nav-bar {
+    padding: 20px;
+  }
+
+  .imageLogo {
+    width: 30%;
+  }
 }
